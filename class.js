@@ -55,9 +55,17 @@ console.log(result());
 // console.log(arrayCopy);
 // console.log(array);
 
-const nestArray = [1, 2, [3, 4]];
-const arrayCopy2 = structuredClone(nestArray);
-arrayCopy2.push(7);
-arrayCopy2[2][0] = 33;
-console.log(arrayCopy2);
-console.log(nestArray);
+// const nestArray = [1, 2, [3, 4]];
+// const arrayCopy2 = structuredClone(nestArray);
+// arrayCopy2.push(7);
+// arrayCopy2[2][0] = 33;
+// console.log(arrayCopy2);
+// console.log(nestArray);
+
+function num(...numbers) {
+  numbers.reduce((acc, red) => {
+    console.log(acc + red);
+    return acc + red;
+  }, 0);
+}
+num(1, 2, 3, 4, 5);
